@@ -36,7 +36,8 @@ const walkBtn = document.getElementById("walkBtn");
 const activity2Btn = document.getElementById("activity2Btn"); 
 
 // images
-const mainImg = document.getElementById("mainImg");
+const mainImg = document.getElementById("mainImage");
+
 
 //Opening animation and game setup
 document.addEventListener("DOMContentLoaded", () => {
@@ -54,21 +55,18 @@ function initial(){
 
 pet.addEventListener("change", (e) => {
     petType = e.target.value;
-    console.log(petType);
     let nameOfPet = petName.value;
-    console.log(nameOfPet);
     startingPage.style.opacity = "0%";
     startingPage.style.visibility = "hidden";
     container.style.visibility = "visible";
     titleText2.innerText = `${nameOfPet} the ${petType}`
-    console.log(titleText2.innerText);
     setAct2Btn(petType);
 });
 
 sleepBtn.addEventListener("click", () => {
-    document.getElementById("mainImg").src = `images/shared/sleep.gif`
+    mainImg.src = `images/shared/sleep.gif`
     setTimeout(() => {
-        document.getElementById("mainImg").src = `images/${petType.value}/stand.gif`;
+        mainImg.src = `images/${petType.value}/stand.gif`;
         health.value +=10;
         energy.value +=20;
         hunger.value -=10;
@@ -78,9 +76,9 @@ sleepBtn.addEventListener("click", () => {
     
 });
 foodBtn.addEventListener("click", () => {
-    document.getElementById("mainImg").src = `images/shared/food.gif`
+    mainImg.src = `images/shared/food.gif`
     setTimeout(() => {
-        document.getElementById("mainImg").src = "`images/${petType}/stand.gif`";
+        mainImg.src = `images/${petType}/stand.gif`;
         hunger.value += 10;
         health.value += 5;
         thirst.value -= 2;
@@ -90,9 +88,9 @@ foodBtn.addEventListener("click", () => {
     
 });
 drinkBtn.addEventListener("click", () => {
-    document.getElementById("mainImg").src = `images/shared/drink.gif`
+    mainImg.src = `images/shared/drink.gif`
     setTimeout(() => {
-        document.getElementById("mainImg").src = `images/${petType}/stand.gif`;
+        mainImg.src = `images/${petType}/stand.gif`;
         thirst.value += 10;
         health.value += 8;
         hunger.value += 1;
@@ -102,84 +100,70 @@ drinkBtn.addEventListener("click", () => {
     
 });
 walkBtn.addEventListener("click", () => {
-    let walk = "";
-    let stand = "";
-    if (petType.value == "unicorn") {
-        document.getElementById("mainImg").src = "images/unicorn/walk.gif";
+        mainImg.src = `images/${petType}/walk.gif`;
+        health.value +=5;
+        happiness.value +=5;
+        hunger.value -=5;
+        thirst.value -=5;
+        happiness.value +=10;
         setTimeout(() => {
-            document.getElementById("mainImg").src = "images/unicorn/stand.gif";
-            health.value +=5;
-            happiness.value +=5;
-            hunger.value -=5;
-            thirst.value -=5;
-            happiness.value +=10;
-        }, 5000);
-    } else if(petType.value == "dog") {
-        document.getElementById("mainImg").src = "images/dog/walk.gif";
-        setTimeout(() => {
-            document.getElementById("mainImg").src = "images/dog/stand.gif";
-            health.value +=5;
-            happiness.value +=5;
-            hunger.value -=5;
-            thirst.value -=5;
-            happiness.value +=10;
-        }, 5000);
-    } else { 
-        document.getElementById("mainImg").src = "images/bear/walk.gif";
-        setTimeout(() => {
-            document.getElementById("mainImg").src = "images/bear/stand.gif";
-            health.value +=5;
-            happiness.value +=5;
-            hunger.value -=5;
-            thirst.value -=5;
-            happiness.value +=10;
-        }, 5000);
-    }    
+            mainImg.src = `images/${petType}/stand.gif`; 
+        }, 3000);    
 });
 activity2Btn.addEventListener("click", () => {
-    document.getElementById("mainImg").src = `images/${petType}/activity2.gif`
+    mainImg.src = `images/${petType}/activity2.gif`
+    happiness.value +=5;
+    health.value +=5;
+    hunger.value -=10;
+    thirst.value -=10;
+    happiness.value +=20;
     setTimeout(() => {
-        document.getElementById("mainImg").src = `images/${petType}/stand.gif`;
-        happiness.value +=5;
-        health.value +=5;
-        hunger.value -=10;
-        thirst.value -=10;
-        happiness.value +=20;
-    }, 5000);
+        mainImg.src = `images/${petType}/stand.gif`;
+    }, 3000);
 });
 health.addEventListener("mouseover", () => {
+    healthOverlay.style.visibility = "visible";
     healthOverlay.style.display = "flex";
     healthValue.innerText = `${health.value} / 100`;
 });
 health.addEventListener("mouseout", () => {
+    healthOverlay.style.visibility = "hidden";
     healthOverlay.style.display = "none";
 });
 happiness.addEventListener("mouseover", () => {
+    happinessOverlay.style.visibility = "visible";
     happinessOverlay.style.display = "flex";
     happinessValue.innerText = `${happiness.value} / 100`;
 });
 happiness.addEventListener("mouseout", () => {
+    happinessOverlay.style.visibility = "hidden";
     happinessOverlay.style.display = "none";
 });
 hunger.addEventListener("mouseover", () => {
+    hungerOverlay.style.visibility = "visible";
     hungerOverlay.style.display = "flex";
     hungerValue.innerText = `${hunger.value} / 100`;
 });
 hunger.addEventListener("mouseout", () => {
+    hungerOverlay.style.visibility = "hidden";
     hungerOverlay.style.display = "none";
 });
 thirst.addEventListener("mouseover", () => {
+    thirstOverlay.style.visibility = "visible";
     thirstOverlay.style.display = "flex";
     thirstValue.innerText = `${thirst.value} / 100`;
 });
 thirst.addEventListener("mouseout", () => {
+    thirstOverlay.style.visibility = "hidden";
     thirstOverlay.style.display = "none";
 });
 energy.addEventListener("mouseover", () => {
+    energyOverlay.style.visibility = "visible";
     energyOverlay.style.display = "flex";
     energyValue.innerText = `${energy.value} / 100`;
 });
 energy.addEventListener("mouseout", () => {
+    energyOverlay.style.visibility = "hidden";
     energyOverlay.style.display = "none";
 });
 function changeValue(barNumber, change) {
@@ -189,13 +173,10 @@ function changeValue(barNumber, change) {
 
 function setAct2Btn(petType){
     if (petType == "dog"){
-        console.log("Fetch");
         activity2Btn.innerText = "Fetch"; 
     } else if (petType == "bear"){
-        console.log("Tree's");
         activity2Btn.innerText = "Scratch Tree's";
     } else {
-        console.log("Dance");
         activity2Btn.innerText = "Dance";
     };
 }

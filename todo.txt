@@ -1,4 +1,5 @@
 To Do:
 Add pictures/gifs for other animals
-Add gifs for food/drink/sleep
+Add gifs for food/drink
 Add an outcome for if the bars reach zero
+Fix stats overlays messing up layout 

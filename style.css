@@ -97,7 +97,7 @@ h1{
 }
 .titleDiv{
     margin-top: -20px;
-    display: flex;
+    display: block;
     justify-content: center;
     color: white;
     font-family: 'pixeloid_sansbold';
@@ -120,38 +120,55 @@ h1{
     font-family: 'pixeloid_monoregular';
     font-size: 14px;
     text-align: center;
-    margin-top: -10px;
     margin-bottom: -3px;
 }
 .foodDrink{
     display: flex;
     justify-content: space-evenly;
     font-family: 'pixeloid_monoregular';
-    margin-bottom: -10px;
 }
 .foodDrinkBars{
     display: block;
     height: 20px;
 }
 .foodDrinkBars progress{
+    display: inline-flex;
+    justify-content: space-evenly;
     width: 200px;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: -15px;
+    margin-top: 15px;
+}
+.hungerOverlay{
+    display:none;
+    visibility:hidden;
+}
+.happinessOverlay{
+    display:none;
+    visibility:hidden;
+}
+.thirstOverlay{
+    display:none;
+    visibility:hidden;
+}
+.healthOverlay{
+    display:none;
+    visibility:hidden;
+}
+.energyOverlay{
+    display:none;
+    visibility:hidden;
 }
 /* IMAGES */
 .image{
     text-align: center;
-    display: inline-block;
-    width: 250px;
-    height: 250px;
-}
-.walkImage{
-    display:none;
 }
 .mainImage{
     display: inline-block;
-}
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+} 
 /*-----BUTTONS-----*/
 .btns button {
     display: inline-block;
