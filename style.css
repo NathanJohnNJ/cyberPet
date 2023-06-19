@@ -1,0 +1,168 @@
+/*-----FONTS-----*/
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Righteous&family=Source+Code+Pro:wght@300&display=swap');
+
+@font-face {
+    font-family: 'pixeloid_monoregular';
+    src: url('font/pixeloid/pixeloidmono.woff2') format('woff2'),
+         url('font/pixeloid/pixeloidmono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}                         
+
+@font-face {
+    font-family: 'pixeloid_sansregular';
+    src: url('font/pixeloid/pixeloidsans.woff2') format('woff2'),
+         url('font/pixeloid/pixeloidsans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pixeloid_sansbold';
+    src: url('font/pixeloid/pixeloidsansbold.woff2') format('woff2'),
+         url('font/pixeloid/pixeloidsansbold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-----GENERAL-----*/
+body {
+    background-color: black;
+    text-align: center;
+    align-content: center;
+    font-family: 'pixeloid_sansbold';
+    font-size: 15px;
+}
+h1{
+    font-family: 'pixeloid_monoregular';
+    font-size: xxx-large;
+}
+/* -----OPENING------- */
+.welcome{
+    color: purple;
+    margin-top: 35%;
+    transition: margin-top 5s;
+    font-size: 25px;
+    transition: font-size 5s;
+    display: block;
+}
+.title{
+    font-size: 20px;
+    transition: font-size 5s;
+    color: rgb(57, 123, 57);
+    height: 100%;
+    width: 100%;
+}
+/*-----STARTING PAGE-----*/
+.startingPage {
+    width: auto;
+    margin-top: 1%;
+    background-color: purple;
+    display: flex;
+    visibility: hidden;
+    opacity: 20%;
+    transition: opacity 5s;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+}
+.petName {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'pixeloid_sansregular';
+    font-size: large;
+}
+.selectAnimal {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    margin: 5px;
+    font-family: 'pixeloid_sansregular';
+    font-size: large;
+}
+
+/* ------MAIN PAGE----- */
+.container {
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin: 40px;
+    z-index: 200;
+    padding: 55px;
+    border-radius: 48%;
+    visibility: hidden;
+    background-color:purple;
+}
+.titleDiv{
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'pixeloid_sansbold';
+    font-size: larger;
+    text-align: center;
+    margin-bottom: -15px;
+}
+
+/*-----PROGRESS BARS-----*/
+.mainBars{
+    display: inline-block;
+}
+.mainBars progress {
+    width: 400px;
+    /* max-width: 600px; */
+    height: 20px;
+    margin-bottom: -10px;
+}
+.mainBars .titles{
+    font-family: 'pixeloid_monoregular';
+    font-size: 14px;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: -3px;
+}
+.foodDrink{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'pixeloid_monoregular';
+    margin-bottom: -10px;
+}
+.foodDrinkBars{
+    display: block;
+    height: 20px;
+}
+.foodDrinkBars progress{
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -15px;
+}
+/* IMAGES */
+.image{
+    text-align: center;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+}
+.walkImage{
+    display:none;
+}
+.mainImage{
+    display: inline-block;
+}
+/*-----BUTTONS-----*/
+.btns button {
+    display: inline-block;
+    position: relative;
+    padding: 14px 16px;
+    margin-top: 15px;
+    font-family: 'pixeloid_sansbold';
+    font-size: 12px;
+}
+.btns{
+    display: block;
+}
+
+

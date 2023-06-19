@@ -1,0 +1,4 @@
+To Do:
+Add pictures/gifs for other animals
+Add gifs for food/drink/sleep
+Add an outcome for if the bars reach zero

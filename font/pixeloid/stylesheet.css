@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'pixeloid_monoregular';
+    src: url('font/webfontkit-20230614-094512/pixeloidmono-d94ev-webfont.woff2') format('woff2'),
+         url('font/webfontkit-20230614-094512/pixeloidmono-d94ev-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pixeloid_sansregular';
+    src: url('font/webfontkit-20230614-094512/pixeloidsans-mlxmm-webfont.woff2') format('woff2'),
+         url('font/webfontkit-20230614-094512/pixeloidsans-mlxmm-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pixeloid_sansbold';
+    src: url('font/webfontkit-20230614-094512/pixeloidsansbold-pknyd-webfont.woff2') format('woff2'),
+         url('font/webfontkit-20230614-094512/pixeloidsansbold-pknyd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

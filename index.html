@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CyberPet</title>
+</head>
+<body>
+    <div class="welcome" id="welcome">
+        <h2>Nathan and Chris Proudly Present...</h2>
+    </div>
+    <div class="title" id="title">
+        <h1 id="titleText">Cyber Pet</h1>
+    </div>
+    <!-- welcome screen finished -->
+    <div id="startingPage" class="startingPage">
+        <h1>Cyber Pet</h1>
+            <label class="petName">
+                Choose a name for your pet:
+            <input id="petName" class="petName" name="name" />
+            </label>
+            <label class="selectAnimal">
+                Choose an animal to be your pet:
+                <select id="selectAnimal" class="selectAnimal" name="selectAnimal">
+                  <option value="">Select One …</option>
+                  <option value="bear">Bear</option>
+                  <option value="dog">Dog</option>
+                  <option value="unicorn">Unicorn</option>
+                </select>
+              </label>
+        <!-- <div id="result" class="result"></div> -->
+    </div>
+    <!-- start overlay finished -->
+    <div class="container" id="container">
+        <div class="titleDiv" id="titleDiv">
+            <h1>Cyber Pet</h1>
+            <p class="titleText2" id="titleText2"></p>
+        </div>
+        
+        <div class="mainBars">
+            <p class="titles">Health</p>
+            <progress id="health" value="100" max="100"></progress>
+            <div id="healthOverlay" class="healthOverlay">
+                <p id="healthValue"></p>
+            </div>
+            <p class="titles">Happiness</p>
+            <progress id="happiness" value="100" max="100"></progress>
+            <div id="happinessOverlay" class="happinessOverlay">
+                <p id="happinessValue"></p>
+            </div>
+            <p class="titles">Energy</p>
+            <progress id="energy" value="100" max="100"></progress>
+            <div id="energyOverlay" class="energyOverlay">
+                <p id="energyValue"></p>
+        </div>
+        <div class="foodDrink" id="foodDrink">
+            <p class="titles">Hunger</p>
+            <p class="titles">Thirst</p>
+        </div>
+        <div class="foodDrinkBars">
+            <progress id="hunger" value="100" max="100"></progress>
+            <div id="hungerOverlay" class="hungerOverlay">
+                <p id="hungerValue"></p>
+            <progress id="thirst" value="100" max="100"></progress>
+            <div id="thirstOverlay" class="thirstOverlay">
+                <p id="thirstValue"></p>
+        </div>
+        <div id="image">
+            <img src="images/unicorn/stand.gif" class="image mainImage" id="mainImage" alt="Main image.">
+        </div>
+        <div class="btns">
+            <button id="foodBtn">Food</button>    
+            <button id="drinkBtn">Drink</button>
+            <button id="walkBtn">Walk</button>
+            <button id="activity2Btn"></button>
+            <button id="sleepBtn">Sleep</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
